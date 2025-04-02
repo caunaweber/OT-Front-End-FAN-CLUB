@@ -26,14 +26,19 @@
         <form name="frmInscricao" method="post" action="#" onsubmit="return validaInscricao()">
             <fieldset class="inscricao">
                 <legend>Dados pessoais:</legend>
+
                 <label for="nome">Nome: </label>
                 <input type="text" name="txtnome" id="inputName"><br>
+
                 <label for="fone">Telefone: </label>
-                <input type="text" name="txtfone" id="Inputfone"><br>
-                <label for="email">E-mail: </label>
-                <input type="text" name="txtmail" id="Inputemail"><br>
+                <input type="text" name="txtfone" id="Inputfone" placeholder="(99) 99999-9999" ><br>
+
+                <label for="email" >E-mail: </label>
+                <input type="text" name="txtmail" id="Inputemail" placeholder="exemplo@dominio.com" ><br>
+
                 <label for="Data">Data de nascimento: </label>
                 <input type="date" name="numDataNasc" id="InputdataNasc"><br>
+
                 <label>Sexo: </label>
                 <div class="radio-container">
                     <div class="radio-group">
@@ -44,7 +49,7 @@
             </fieldset>
 
             <fieldset class="button">
-                <button type="reset">Limpar</button><button type="submit" id="btnEnviar" disabled >Enviar</button>
+                <button type="reset">Limpar</button><button type="submit" id="btnEnviar" disabled>Enviar</button>
             </fieldset>
         
         </form>
