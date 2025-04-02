@@ -1,91 +1,118 @@
-body{
-  background-image:url(../imgs/firelink.jpg);
+
+html, body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, conteúdo flexível e footer */
+}
+
+body {
+  background-image: url(../imgs/firelink.jpg);
   background-size: cover;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Century Gothic", sans-serif;
   text-align: center;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-body section img{
-  float: left;
-  height: 250px;
-  width: 250px;
-  margin: 10px;
-
-}
-
-footer{
- 
-  color: #ff4500;
-  text-align: left;
-  padding: 2px;
-}
-
-body section{
   color: white;
 }
 
-header{
-  height: 153px;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
   background-color: rgba(0, 0, 0, 0.363);
+  position: relative;
 }
 
-header h1{ 
-  float:left;
-  margin: 50px 0 0 200px;
+header img {
+  height: 140px;
+  width: 140px;
+  margin-right: 20px;
+  position: absolute;
+  left: 20px;
+}
+
+header h1 {
   font-size: 60px;
   color: #ff4500;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 0;
 }
 
-header img{
-  float: left;
-  height: 140px;
-  width: 140px;
-  margin: 10px;
-}
-
-section #topo{
-  width: 900px;
-  margin: 0px auto;
-  height: 250px;
-}
-
-nav{
-  clear: both;
+nav {
   width: 80%;
-  margin:0px auto;
+  margin: 10px auto;
   height: 55px;
-  
+  display: flex;
+  justify-content: space-between;
 }
 
-nav a{
+nav a {
   color: white;
   text-decoration: none;
   text-align: center;
-  
+  flex: 1;
+  margin: 0 5px;
 }
 
-nav .opcao{
-  float: left;
-  width: 31.3%;
+nav .opcao {
   background-color: rgba(0, 0, 0, 0.295);
   padding: 10px 0;
-  margin: 0 1%;
   font-size: 26px;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav .opcao:hover{
+nav .opcao:hover {
   transform: translateY(-5px);
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
-h2{
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 98%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.home-section img {
+  width: 20%;
+  max-width: 300px;
+  min-height: 50px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  margin: 10px;
+  margin-left: 3%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  max-width: 60%;
+}
+
+
+
+.inscricao-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.conteudo-section {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 1%;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0;
   font-size: 50px;
 }
 
@@ -133,42 +160,43 @@ button:not(:disabled):hover {
 }
 
 table {
-    border-collapse: collapse;
-    border: 2px solid rgba(255, 68, 0, 0.575);
-    font-family: sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-align: center;
-    margin: auto;
-    background-color: #0000004f;
-  }
-  
-  caption {
-    caption-side: bottom;
-    padding: 10px;
-    font-weight: bold;
-  }
-  
-  thead,
-  tfoot {
-    background-color: rgb(255 240 245);
-  }
-  
-  th,
-  td {
-    border: 1px solid rgb(160 69 0);
-    padding: 8px 10px;
-  }
-  
-  td:last-of-type {
-    text-align: center;
-  }
-  
-  tfoot th {
-    text-align: right;
-  }
-  
-  tfoot td {
-    font-weight: bold;
-  }
-  
+  border-collapse: collapse;
+  border: 2px solid rgba(255, 68, 0, 0.575);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 1.5% auto;
+  background-color: #0000004f;
+}
+
+thead,
+tfoot {
+  background-color: rgb(255 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 69 0);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+footer {
+  color: #ff4500;
+  justify-content: center;
+  padding: 10px;
+  width: 98%;
+  position:fixed;
+  bottom: 0;
+}
