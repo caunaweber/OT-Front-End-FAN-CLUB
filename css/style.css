@@ -57,12 +57,14 @@ nav{
   width: 80%;
   margin:0px auto;
   height: 55px;
+  
 }
 
 nav a{
   color: white;
   text-decoration: none;
   text-align: center;
+  
 }
 
 nav .opcao{
@@ -72,6 +74,7 @@ nav .opcao{
   padding: 10px 0;
   margin: 0 1%;
   font-size: 26px;
+  border-radius: 10px;
 }
 
 nav .opcao:hover{
@@ -113,8 +116,12 @@ form {
   gap: 10px;
 }
 
-button:hover {
+button:not(:disabled):hover {
   opacity: 0.6;
+}
+
+#btnEnviar:disabled {
+  cursor: not-allowed;
 }
 
 .button button{
