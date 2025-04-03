@@ -1,3 +1,5 @@
+console.log($);
+
 function validaInscricao(){
     let nome = document.frmInscricao.txtnome.value.trim();
     let email = document.frmInscricao.txtmail.value.trim();
@@ -70,3 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
         radio.addEventListener("change", verificaCampos);
     });
 });
+
+$(document).ready(function() {
+    $("header").load("/pages/general/header.html");
+    $("nav").load("/pages/general/nav.html");
+    $("footer").load("/pages/general/footer.html");
+});;
